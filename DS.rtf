@@ -1,0 +1,977 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.15063}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs28\lang9 ---------------------------------------------------------------------\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Assignment Name: Demonstration of Array\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+#include<process.h>\par
+class demo\par
+\{\par
+int a[10],i,j,n,item,k;\par
+public:\par
+void get();\par
+void insert();\par
+void del();\par
+void dis();\par
+\};\par
+void demo::get()\par
+\{\par
+cout<<"\\nEnter n";\par
+cin>>n;\par
+cout<<"\\nEnter Array Element:";\par
+for(i=0;i<n;i++)\par
+cin>>a[i];\par
+\}\par
+void demo::insert()\par
+\{\par
+cout<<"\\nEnter Position:";\par
+cin>>k;\par
+cout<<"\\nEnter Item:";\par
+cin>>item;\par
+j=n;\par
+while(j>=k)\par
+\{\par
+a[j+1]=a[j];\par
+j--;\par
+\}\par
+a[k]=item;\par
+n++;\par
+\}\par
+void demo::del()\par
+\{\par
+cout<<"\\nEnter Position:";\par
+cin>>k;\par
+j=k;\par
+while(j<=n-1)\par
+\{\par
+a[j]=a[j+1];\par
+j++;\par
+\}\par
+n--;\par
+\}\par
+void demo::dis()\par
+\{\par
+cout<<"\\n Elements are\\n";\par
+for(i=0;i<n;i++)\par
+cout<<a[i]<<"\\t";\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+2\par
+demo d;\par
+int ch;\par
+d.get();\par
+cout<<"\\n1. Insert 2.Del 3.Dis 4. Exit\\n";\par
+while(ch!=4)\par
+\{\par
+cout<<"\\n Enter choice";\par
+cin>>ch;\par
+switch(ch)\par
+\{\par
+case 1: d.insert(); break;\par
+case 2: d.del(); break;\par
+case 3: d.dis(); break;\par
+case 4: exit(0);\par
+\}\par
+\}\par
+getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Demonstration of Matrix\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 // prac2\par
+#include<iostream.h>\par
+#include<conio.h>\par
+class matrix\par
+\{\par
+int a[5][5],b[5][5],c[5][5],d[5][5],e[5][5],f[5][5];\par
+int p,q,i,j,k,n,m;\par
+public:\par
+void get();\par
+void add();\par
+void sub();\par
+void trans();\par
+\};\par
+void matrix::get()\par
+\{\par
+cout<<"\\nEnter Number of Row & Column :\\t";\par
+cin>>n>>m;\par
+cout<<"\\nEnter the first Matrix:\\n";\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+cin>>a[i][j];\par
+\}\par
+cout<<"\\nEnter Number of Row & Column :\\t";\par
+cin>>p>>q;\par
+cout<<"\\nEnter the first Matrix:\\n";\par
+for(i=0;i<p;i++)\par
+\{\par
+for(j=0;j<q;j++)\par
+cin>>b[i][j];\par
+\}\par
+\}\par
+void matrix::add()\par
+\{\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+\{\par
+c[i][j]=a[i][j]+b[i][j];\par
+\}\par
+\}\par
+cout<<"\\nThe addition of two matrix is :\\n";\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+ cout<<c[i][j]<<"\\t";\par
+ cout<<"\\n";\par
+\}\par
+\}\par
+\par
+void matrix::sub()\par
+\{\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+\{\par
+d[i][j]=a[i][j]-b[i][j];\par
+\}\par
+\}\par
+cout<<"\\nThe Substraction of two matrix is :\\n";\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+ cout<<d[i][j]<<"\\t";\par
+ cout<<"\\n";\par
+\}\par
+\}\par
+void matrix::trans()\par
+\{\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+\{\par
+e[i][j]=a[j][i];\par
+\}\par
+\}\par
+cout<<"\\nThe Transpose of first matrix is :\\n";\par
+for(i=0;i<n;i++)\par
+\{\par
+for(j=0;j<m;j++)\par
+cout<<e[i][j]<<"\\t";\par
+cout<<"\\n";\par
+\}\par
+\}\par
+\par
+void main()\par
+\{\par
+clrscr();\par
+matrix m;\par
+m.get();\par
+m.add();\par
+m.sub();\par
+m.trans();\par
+getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Implement Stack for Integer\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+#include<process.h>\par
+class stack\par
+\{\par
+int s[10],n,top,ele,i;\par
+public:\par
+stack()\par
+\{\par
+top=-1;\par
+\}\par
+void push();\par
+void dis();\par
+int pop();\par
+int peep();\par
+void change();\par
+\};\par
+void stack::push()\par
+\{\par
+if(top>=2)\par
+cout<<"\\nStack is overflow:";\par
+else\par
+\{\par
+cout<<"\\nEnter element:";\par
+cin>>ele;\par
+top++;\par
+s[top]=ele;\par
+\}\par
+\}\par
+void stack::dis()\par
+\{\par
+cout<<"\\nElements in stack are:\\n";\par
+for(i=top;i>=0;i--)\par
+cout<<s[i]<<"\\t";\par
+\}\par
+int stack::pop()\par
+\{\par
+if(top==-1)\par
+\{\par
+cout<<"\\nUnderflow";\par
+return 0;\par
+\}\par
+else\par
+return (s[top--]);\par
+\}\par
+int stack::peep()\par
+\{\par
+cout<<"\\nEnter position:";\par
+cin>>i;\par
+if((top-i+1)<0)\par
+\{\par
+cout<<"\\nUnderflow";\par
+return 0;\par
+7\par
+\}\par
+else\par
+return (s[top-i+1]);\par
+\}\par
+void stack::change()\par
+\{\par
+cout<<"\\nEnter position ";\par
+cin>>i;\par
+if((top-i+1)<0)\par
+\{\par
+cout<<"\\nUnderflow";\par
+\}\par
+else\par
+\{\par
+int n;\par
+cout<<"\\nEnter element:";\par
+cin>>n;\par
+s[top-i+1]=n;\par
+\}\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+stack s;\par
+int ch;\par
+cout<<"\\n1. Push 2.Display 3.Pop 4.Peep 5.Change 6.Exit\\n";\par
+while(ch!=6)\par
+\{\par
+cout<<"\\nEnter ch :";\par
+cin>>ch;\par
+switch(ch)\par
+\{\par
+case 1: s.push(); break;\par
+case 2: s.dis(); break;\par
+case 3: int n=s.pop();\par
+if(n>0)\par
+cout<<"\\nPop ele is "<<n;\par
+break;\par
+case 4: int m=s.peep();\par
+if(m>0)\par
+cout<<"\\nPeep ele is "<<m;\par
+break;\par
+case 5: s.change(); break;\par
+case 6: exit(0);\par
+\}\par
+\}\par
+getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b  Implement linear queue for integer\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+#include<process.h>\par
+class queue\par
+\{\par
+int f,r,q[10],n,i;\par
+public:\par
+queue()\par
+\{\par
+f=r=0;\par
+\}\par
+void insert();\par
+void del();\par
+void dis();\par
+\};\par
+void queue::insert()\par
+\{\par
+if(r==3)\par
+cout<<"\\nOverflow";\par
+else\par
+\{\par
+cout<<"\\nEnter n";\par
+cin>>n;\par
+if(f==0)\par
+ f=1;\par
+ r++;\par
+ q[r]=n;\par
+\}\par
+\}\par
+void queue::del()\par
+\{\par
+if(f==0)\par
+\{\par
+cout<<"\\nUnderflow";\par
+return;\par
+\}\par
+else\par
+\{\par
+int n;\par
+n=q[f];\par
+if(f==r)\par
+f=r=0;\par
+else\par
+f++;\par
+cout<<"\\nDeleted element is "<<n;\par
+\}\par
+\}\par
+void queue::dis()\par
+\{\par
+if(f==0)\par
+cout<<"\\nUnderflow";\par
+else\par
+\{\par
+cout<<"\\nElements in queue are:";\par
+10\par
+for(i=f;i<=r;i++)\par
+ cout<<q[i]<<"\\t";\par
+\}\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+queue q;\par
+int ch;\par
+cout<<"\\n 1.insert 2.display 3.delete 4. exit \\n";\par
+while(ch!=4)\par
+\{\par
+cout<<"\\nEnter ch:";\par
+cin>>ch;\par
+switch(ch)\par
+\{\par
+case 1: q.insert(); break;\par
+case 2: q.dis(); break;\par
+case 3: q.del(); break;\par
+case 4:exit(0);\par
+\}\par
+\}\par
+getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Perform Insert, Display, delete, search, sum operation on LL\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 // Link List  insert at begening\par
+#include<iostream.h>\par
+#include<conio.h>\par
+#include<process.h>\par
+class linklist\par
+\{\par
+int ele,data;\par
+linklist *start,*link,*move,*next;\par
+public:\par
+linklist()\par
+\{\par
+start=NULL;\par
+\}\par
+void insertbeg();\par
+void search();\par
+void del();\par
+void show();\par
+void count();\par
+\};\par
+void linklist::insertbeg()\par
+\{\par
+cout<<"enter elements"<<endl;\par
+cin>>ele;\par
+linklist *node;\par
+node=new linklist();\par
+node->data=ele;\par
+node->link=NULL;\par
+if(start==NULL)\par
+\{\par
+start=node;\par
+\}\par
+else\par
+\{\par
+node->link=start;\par
+start=node;\par
+\}\par
+\}\par
+void linklist::show()\par
+\{\par
+if(start==NULL)\par
+\{\par
+cout<<"node is empty"<<endl;\par
+\}\par
+else\par
+\{\par
+move=start;\par
+while(move!=NULL)\par
+\{\par
+cout<<move->data;\par
+move=move->link;\par
+\}\par
+\}\par
+\}\par
+void linklist::del()\par
+\{\par
+if(start==NULL)\par
+\{\par
+cout<<"Linklist is empty"<<endl;;\par
+\}\par
+else\par
+\{\par
+\tab linklist *temp;\par
+\tab temp=start;\par
+\tab ele=temp->data;\par
+\tab start=temp->link;\par
+\tab delete temp;\par
+\}\par
+\}\par
+void linklist::search()\par
+\{\par
+int s;\par
+cout<<"enter element to search"<<endl;\par
+cin>>s;\par
+if(start==NULL)\par
+\{\par
+cout<<"node is empty"<<endl;\par
+\}\par
+else\par
+\{\par
+move=start;\par
+while(move!=NULL)\par
+\{\par
+if(move->data==s)\par
+\{\par
+cout<<"data found"<<endl;\par
+move=move->next;\par
+\}\par
+else\par
+\{\par
+cout<<"data not found"<<endl;\par
+move=move->next;\par
+\}\par
+\}\par
+\}\par
+\}\par
+void linklist::count()\par
+\{\par
+\tab int c;\par
+\tab if(start==NULL)\par
+\tab\{\par
+\tab\tab cout<<"Empty";\par
+\tab\}\par
+\tab else\par
+\tab\{\par
+\tab linklist *temp;\par
+\tab temp=start;\par
+\tab c=0;\par
+\tab while(temp!=NULL)\par
+\tab\{\par
+\tab\tab c=c+temp->data;\par
+\tab\tab temp=temp->link;\par
+\tab\}\par
+\tab\}\par
+\tab cout<<"Sum"<<c;\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+linklist l;\par
+int ch;\par
+cout<<"1.insertbeg 2.show 3.Delete 4.search 5.Count 6.exit"<<endl;\par
+while(ch!=6)\par
+\{\par
+cout<<"\\nenter your choise"<<endl;\par
+cin>>ch;\par
+switch(ch)\par
+\{\par
+case 1:l.insertbeg();break;\par
+case 2:l.show();break;\par
+case 3:l.del();break;\par
+case 4:l.search();break;\par
+case 5:l.count();break;\par
+case 6:exit(0);\par
+default:cout<<"you entered wrong choise"<<endl;\par
+\}\par
+\}\par
+getch();\par
+\}\b\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul  Perform Deletion in LL according to position & information\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+#include<process.h>\par
+class node\par
+\{\par
+int info,item;\par
+node *link;\par
+public:\par
+void insert();\par
+void dis();\par
+void del_info();\par
+void del_pos();\par
+\};\par
+node *move,*start,*temp;\par
+void node::insert()\par
+\{\par
+cout<<"\\nEnter the item:";\par
+cin>>item;\par
+node *node1=new node;\par
+node1->link=NULL;\par
+node1->info=item;\par
+if(start==NULL)\par
+start=node1;\par
+else\par
+\{\par
+move=start;\par
+while(move->link!=NULL)\par
+move=move->link;\par
+move->link=node1;\par
+\}\par
+\}\par
+void node::dis()\par
+\{\par
+node *x;\par
+x=start;\par
+while(x!=NULL)\par
+\{\par
+cout<<"\\t"<<x->info;\par
+x=x->link;\par
+\}\par
+\}\par
+void node::del_pos()\par
+\{\par
+int pos,f=0,c=0;\par
+node *p;\par
+cout<<"\\nEnter Position:";\par
+cin>>pos;\par
+temp=start;\par
+if(start==NULL)\par
+cout<<"\\nLL is empty\\n";\par
+if(pos==1)\par
+\{\par
+start=start->link;\par
+15\par
+f=1;\par
+\}\par
+while(temp!=NULL)\par
+\{\par
+c++;\par
+p=temp;\par
+temp=temp->link;\par
+if(c==pos-1)\par
+\{\par
+f=1;\par
+p->link=temp->link;\par
+\}\par
+\}\par
+if(f==0)\par
+cout<<"\\n node is not found";\par
+\}\par
+void node::del_info()\par
+\{\par
+int pos,f=0;\par
+node *p;\par
+cout<<"\\nEnter the element:";\par
+cin>>item;\par
+temp=start;\par
+if(start==NULL)\par
+cout<<"\\nLL is Empty:";\par
+if(start->info==item)\par
+\{\par
+start=start->link;\par
+f=1;\par
+\}\par
+while(temp!=NULL)\par
+\{\par
+p=temp;\par
+temp=temp->link;\par
+if(temp->info==item)\par
+\{\par
+f=1;\par
+p->link=temp->link;\par
+\}\par
+\}\par
+if(f==0)\par
+cout<<"\\n node is not found";\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+node n;\par
+int ch;\par
+cout<<"\\n1.Insert 2.Display 3.Del_position 4.Del_information 5.exit:\\n";\par
+while(ch!=5)\par
+\{\par
+cout<<"\\nEnter choice";\par
+cin>>ch;\par
+switch(ch)\par
+\{\par
+case 1: n.insert(); break;\par
+case 2: n.dis(); break;\par
+case 3: n.del_pos(); break;\par
+case 4: n.del_info(); break;\par
+16\par
+case 5: exit(0);\par
+\}\par
+\}\par
+getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b  Implement Doubly Link List\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+#include<process.h>\par
+class node\par
+\{\par
+int info,c,j;\par
+node *left,*right;\par
+public:\par
+void insert();\par
+void display();\par
+void del();\par
+\};\par
+node *start=NULL,*temp=NULL,*move=NULL, *temp1=NULL;\par
+void node::insert()\par
+\{\par
+int item;\par
+node *p=new node;\par
+cout<<"\\nEnter element:";\par
+cin>>item;\par
+p->info=item;\par
+p->left=NULL;\par
+p->right=NULL;\par
+if(start==NULL)\par
+\{\par
+start=p;\par
+return;\par
+\}\par
+else\par
+\{\par
+temp=start;\par
+while(temp->right!=NULL)\par
+temp=temp->right;\par
+temp->right=p;\par
+p->left=start;\par
+\}\par
+\}\par
+void node::display()\par
+\{\par
+move=start;\par
+if(move==NULL)\par
+\{\par
+cout<<"\\n LL Empty:";\par
+return;\par
+\}\par
+else\par
+\{\par
+cout<<"\\n node in DLL are :";\par
+while(move!=NULL)\par
+\{\par
+cout<<move->info<<"\\t";\par
+move=move->right;\par
+\}\par
+\}\par
+18\par
+\}\par
+void node::del()\par
+\{\par
+if(start==NULL)\par
+\{\par
+cout<<"\\n LL Empty:";\par
+return;\par
+\}\par
+temp=start;\par
+start=temp->right;\par
+start->left=NULL;\par
+temp->right=NULL;\par
+cout<<"\\n deleted element is"<<temp->info;\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+node n;\par
+int ch;\par
+cout<<"\\n1. Insert 2. Display 3.Delete 4. Exit";\par
+while(ch!=4)\par
+\{\par
+cout<<"\\nEnter choice";\par
+cin>>ch;\par
+switch(ch)\par
+\{\par
+case 1: n.insert(); break;\par
+case 2: n.display(); break;\par
+case 3: n.del(); break;\par
+case 4: exit(0);\par
+\}\par
+\}\par
+getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Perform Bubble Sort\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+class arr\par
+\{\par
+  int a[10],n,m;\par
+  public:\par
+   void get();\par
+  void bsort();\par
+  void disp();\par
+\};\par
+void arr::get()\par
+\{\par
+     cout<<"Enter Size of array"<<endl;\par
+     cin>>n;\par
+     cout<<"Enter elements "<<endl;\par
+     for(int i=0;i<n;i++)\par
+     \{\par
+\tab cin>>a[i];\par
+     \}\par
+     cout<<"Elements are "<<endl;\par
+     for(i=0;i<n;i++)\par
+     \{\par
+\tab cout<<a[i]<<endl;\par
+     \}\par
+\}\par
+void arr::bsort()\par
+\{\par
+\tab for(int i=0;i<n;i++)\par
+\tab\{\par
+\tab\tab for(int j=0;j<n-1;j++)\par
+\tab\tab\{\par
+\tab\tab    if(a[j]>a[j+1])\par
+\tab\tab    \{\par
+\tab\tab\tab m=a[j+1];\par
+\tab\tab\tab a[j+1]=a[j];\par
+\tab\tab\tab a[j]=m;\par
+\tab\tab    \}\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+void arr::disp()\par
+\{\par
+      cout<<"Sorted elements are"<<endl;\par
+      for(int i=0;i<n;i++)\par
+     \{\par
+\tab cout<<a[i]<<endl;\par
+     \}\par
+\}\par
+void main()\par
+\{\par
+\tab clrscr();\par
+\tab arr o;\par
+\tab o.get();\par
+\tab o.bsort();\par
+\tab o.disp();\par
+\tab getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Perform Selection Sort\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+class arr\par
+\{\par
+  int a[10],n,m;\par
+  public:\par
+   void get();\par
+  void ssort();\par
+  void disp();\par
+\};\par
+void arr::get()\par
+\{\par
+     cout<<"Enter Size of array"<<endl;\par
+     cin>>n;\par
+     cout<<"Enter elements "<<endl;\par
+     for(int i=0;i<n;i++)\par
+     \{\par
+\tab cin>>a[i];\par
+     \}\par
+     cout<<"Elements are "<<endl;\par
+     for(i=0;i<n;i++)\par
+     \{\par
+\tab cout<<a[i]<<endl;\par
+     \}\par
+\}\par
+void arr::ssort()\par
+\{\par
+     for(int j=0;j<n;j++)\par
+     \{\par
+\tab int min=j;\par
+\tab for(int k=j+1;k<n;k++)\par
+\tab\{\par
+\tab\tab if(a[k]<a[min])\par
+\tab\tab\{\par
+\tab\tab        min=k;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(min!=j)\par
+\tab\{\par
+\tab\tab m=a[j];\par
+\tab\tab a[j]=a[min];\par
+\tab\tab a[min]=m;\par
+\tab\}\par
+     \}\par
+\}\par
+void arr::disp()\par
+\{\par
+      cout<<"Sorted elements are"<<endl;\par
+      for(int i=0;i<n;i++)\par
+     \{\par
+\tab cout<<a[i]<<endl;\par
+     \}\par
+\}\par
+void main()\par
+\{\par
+\tab clrscr();\par
+\tab arr o;\par
+\tab o.get();\par
+\tab o.ssort();\par
+\tab o.disp();\par
+\tab getch();\par
+\}\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b  Implement Insertion Sort\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+class arr\par
+\{\par
+  int a[10],n;\par
+  public: void get();\par
+  void isort();\par
+  void disp();\par
+\};\par
+void arr::get()\par
+\{\par
+     cout<<"Enter Size of array"<<endl;\par
+     cin>>n;\par
+     cout<<"Enter elements "<<endl;\par
+     for(int i=0;i<n;i++)\par
+     \{\par
+\tab cin>>a[i];\par
+     \}\par
+     cout<<"Elements are "<<endl;\par
+     for(i=0;i<n;i++)\par
+     \{\par
+\tab cout<<a[i]<<endl;\par
+     \}\par
+\}\par
+void arr::isort()\par
+\{\par
+     for(int j=1;j<=n;j++)\par
+     \{\par
+\tab int t=a[j];\par
+\tab int k=j-1;\par
+\tab while(k>=0 && a[k]>t)\par
+\tab\{\par
+\tab\tab a[k+1]=a[k];\par
+\tab\tab k--;\par
+\tab\}\par
+\tab a[k+1]=t;\par
+     \}\par
+\}\par
+void arr::disp()\par
+\{\par
+      cout<<"Sorted elements are"<<endl;\par
+      for(int i=0;i<n;i++)\par
+     \{\par
+\tab cout<<a[i]<<endl;\par
+     \}\par
+\}\par
+void main()\par
+\{\par
+\tab clrscr();\par
+\tab arr o;\par
+\tab o.get();\par
+\tab o.isort();\par
+\tab o.disp();\par
+\tab getch();\par
+\}\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ul\b Implement Linear and Binary Search\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1  Implement Tower of Hanoi\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+class demo\par
+\{\par
+int n;\par
+public:\par
+void tower(int,char,char,char);\par
+void get();\par
+\};\par
+void demo::get()\par
+\{\par
+cout<<"\\nEnter the number of disk: ";\par
+cin>>n;\par
+tower(n,'A','B','C');\par
+\}\par
+void demo::tower(int n,char beg,char aux,char end)\par
+\{\par
+if(n!=0)\par
+\{\par
+tower(n-1,beg,end,aux);\par
+cout<<"\\n Move disk "<<n<<" from "<<beg<<" to "<<end<<"\\n";\par
+tower(n-1,aux,beg,end);\par
+\}\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+demo d;\par
+d.get();\par
+getch();\par
+\}\ul\b\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Finding Factorial of Number\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0 #include<iostream.h>\par
+#include<conio.h>\par
+class factorial\par
+\{\par
+double n,f;\par
+public:\par
+void get();\par
+double fact(double);\par
+\};\par
+void factorial::get()\par
+\{\par
+cout<<"\\nEnter n";\par
+cin>>n;\par
+f=fact(n);\par
+cout<<"\\n Factorial of "<<n<<" is "<< f;\par
+\}\par
+double factorial::fact(double n)\par
+\{\par
+if(n==0)\par
+return 1;\par
+else\par
+return(n*fact(n-1));\par
+\}\par
+void main()\par
+\{\par
+clrscr();\par
+factorial f;\par
+f.get();\par
+getch();\par
+\}\ul\b\par
+}
+ 
